@@ -2,6 +2,11 @@
   "create": {
     "license": "MIT"
   },
+  "command": {
+    "version": {
+      "ignoreChanges": ["**/*.md"]
+    }
+  },
   "packages": ["packages/*"],
   "npmClient": "yarn",
   "useWorkspaces": true,
