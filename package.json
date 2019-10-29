@@ -4,32 +4,34 @@
     "packages/*"
   ],
   "devDependencies": {
-    "eslint-config-prettier": "^2.9.0",
-    "husky": "^0.14.3",
-    "lint-staged": "^6.1.0",
-    "prettier": "^1.10.2",
-    "xo": "^0.18.2"
+    "husky": "^3.0.9",
+    "lint-staged": "^9.4.2",
+    "prettier": "^1.18.2",
+    "xo": "^0.25.3"
   },
   "scripts": {
-    "lerna": "lerna",
-    "release-stable": "lerna publish --registry=https://registry.npmjs.org/",
-    "release-canary": "lerna publish --cd-version=prerelease --preid=canary --npm-tag=canary --registry=https://registry.npmjs.org/",
-    "precommit": "lint-staged",
     "lint": "xo",
     "test": "npm run lint && NODE_ENV=test nyc ava"
   },
   "xo": {
-    "extends": "prettier"
+    "space": true,
+    "semicolon": false,
+    "prettier": true
   },
   "lint-staged": {
     "*.js": [
       "npm run lint",
-      "prettier --single-quote --no-semi --write",
+      "prettier --write",
       "git add"
     ]
   },
   "dependencies": {
-    "lerna": "^3.0.0-rc.0"
+    "lerna": "^3.18.3"
   },
-  "name": "next-plugins"
+  "name": "next-plugins-custom",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
 }
