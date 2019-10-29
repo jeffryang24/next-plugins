@@ -11,7 +11,7 @@
   },
   "scripts": {
     "lint": "xo",
-    "test": "npm run lint && NODE_ENV=test nyc ava"
+    "test": "yarn run lint && NODE_ENV=test nyc ava"
   },
   "xo": {
     "space": true,
@@ -20,7 +20,7 @@
   },
   "lint-staged": {
     "*.js": [
-      "npm run lint",
+      "yarn run lint",
       "prettier --write",
       "git add"
     ]
