@@ -9,10 +9,10 @@
     "stylus-loader": "^3.0.2"
   },
   "devDependencies": {
-    "stylus": "^0.54.5"
+    "stylus": "^0.54.7"
   },
   "peerDependencies": {
-    "stylus": "^0.54.5"
+    "stylus": "^0.54.7"
   },
   "gitHead": "31e8978d07e5468f760a222a72d1e8f3f457e6ff"
 }
